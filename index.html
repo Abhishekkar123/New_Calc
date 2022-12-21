@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gameDiv
+        {
+            display: flex;
+            flex-wrap:wrap;
+           
+           visibility: hidden;
+            margin-left: 150px;
+        }
+        .cont
+        {
+            border:2px solid black;
+            display: flex;
+            flex-wrap:wrap;
+            width:320px;
+            height:320px;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .cont .div{
+            flex-direction: column;
+              margin-top: 30px;
+
+        }
+        .d{
+            border:2px solid black;
+            display: flex;
+            font-size: 30px;
+            width:102px;
+            height:102px;
+            justify-content: center;
+            align-items: center;
+        }
+         .d:hover{
+            background-color: #d3d3d3;
+            color:#fff;
+            cursor: pointer;
+            border:1px solid #000;
+           box-shadow: 5px 10px 8px 10px #888888;
+         }
+    </style>
+</head>
+<body>
+     <div class="content">
+        <div class="form">
+            Player 1: <input type="text" id="user1"><br>
+            Player 2: <input type="text" id="user2"><br>
+            <input type ="button" id="start" value="Start Game">
+        </div>
+        <div class="gameDiv">
+            <div class ="score">
+                <span id="name1"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="name2"></span><br>
+                <span id="score1"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="score2"></span>
+            </div>
+    <div class="cont">
+        <div class="d" id="0"></div>
+        <div class="d" id="1"></div>
+        <div class="d" id="2"></div>
+        <div class="d" id="3"></div>
+        <div class="d" id="4"></div>
+        <div class="d" id="5"></div>
+        <div class="d" id="6"></div>
+        <div class="d" id="7"></div>
+        <div class="d" id="8"></div>
+        <div class="div">
+                <input type="button" id="reset" value ="Reset">
+                <input type="button" onclick="location.reload()" value ="Restart">
+            </div>
+    </div>
+</div>
+    
+    <script src="js/a.js"></script>
+</body>
+</html>
