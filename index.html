@@ -5,84 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-         .content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .gameDiv
-        {
-            display: flex;
-            flex-wrap:wrap;
-           
-           visibility: hidden;
-            margin-left: 150px;
-        }
-        .cont
-        {
-            border:2px solid black;
-            display: flex;
-            flex-wrap:wrap;
-            width:320px;
-            height:320px;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        .cont .div{
-            flex-direction: column;
-              margin-top: 30px;
-
-        }
-        .d{
-            border:2px solid black;
-            display: flex;
-            font-size: 30px;
-            width:102px;
-            height:102px;
-            justify-content: center;
-            align-items: center;
-        }
-         .d:hover{
-            background-color: #d3d3d3;
-            color:#fff;
-            cursor: pointer;
-            border:1px solid #000;
-           box-shadow: 5px 10px 8px 10px #888888;
-         }
-    </style>
+	<link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-     <div class="content">
-        <div class="form">
-            Player 1: <input type="text" id="user1"><br>
-            Player 2: <input type="text" id="user2"><br>
-            <input type ="button" id="start" value="Start Game">
-        </div>
-        <div class="gameDiv">
-            <div class ="score">
-                <span id="name1"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="name2"></span><br>
-                <span id="score1"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="score2"></span>
-            </div>
-    <div class="cont">
-        <div class="d" id="0"></div>
-        <div class="d" id="1"></div>
-        <div class="d" id="2"></div>
-        <div class="d" id="3"></div>
-        <div class="d" id="4"></div>
-        <div class="d" id="5"></div>
-        <div class="d" id="6"></div>
-        <div class="d" id="7"></div>
-        <div class="d" id="8"></div>
-        <div class="div">
-                <input type="button" id="reset" value ="Reset">
-                <input type="button" onclick="location.reload()" value ="Restart">
-            </div>
-    </div>
+	<div class="container bg-color">
+	<input type="text" class="inputEq" readonly><br>
+	<input type="text" class="input" value="0"><br>
+	<button onclick="clearVal()" class="btn-clear">c</button>
+	<button onclick="backVal()" class="btn-clear">x</button>
+	<button onclick="" class="btn-clear">x</button>
+	<button onclick="showHistory()" class="btn-history">H</button><br>
+    <button onclick="setVal('7')" class="btn-x">7</button>
+	<button onclick="setVal('8')" class="btn-x">8</button>
+	<button onclick="setVal('9')" class="btn-x">9</button>
+	<button onclick="setVal('+')" class="btn">+ </button><br>
+	<button onclick="setVal('4')" class="btn-x">4 </button>
+	<button onclick="setVal('5')" class="btn-x">5 </button>
+	<button onclick="setVal('6')" class="btn-x">6 </button>
+	<button onclick="setVal('-')" class="btn">-</button><br>
+	<button onclick="setVal('1')" class="btn-x">1</button>
+	<button onclick="setVal('2')" class="btn-x">2</button>
+	<button onclick="setVal('3')" class="btn-x">3</button>
+	<button onclick="setVal('%')" class="btn">%</button><br>
+	<button onclick="setVal('0')" class="btn-x"> 0</button>
+	
+	<button onclick="setVal('/')" class="btn">/</button>
+	<button onclick="getAns()" >=</button>
+    <button onclick="setVal('%')" class="btn">.</button><br>
+	
 </div>
-    
-    <script src="js/a.js"></script>
+<div class="button">
+	<div class="history" onclick="removeVal()">
+  X</div>
+		<div class="history-div">
+		</div>
+	<script src="js/a.js"></script>
 </body>
 </html>
