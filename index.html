@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-	<link rel="stylesheet" href="css/style1.css">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
-	<div class="container bg-color">
-	<input type="text" class="inputEq" readonly><br>
-	<input type="text" class="input" value="0"><br>
-	<button onclick="clearVal()" class="btn-clear">c</button>
+	<div class="container">
+		<div class="calc">
+			<input type="text" class="inputEq" readonly>
+	        <input type="text" class="input" value="0">
+			
+		
+		<button onclick="clearVal()" class="btn-clear">c</button>
 	<button onclick="backVal()" class="btn-clear">x</button>
-	<button onclick="" class="btn-clear">x</button>
-	<button onclick="showHistory()" class="btn-history">H</button><br>
+	<button onclick="setVal('*')" class="btn-clear">*</button>
+	<button onclick="showHistory()" class="btn-history">H</button>
     <button onclick="setVal('7')" class="btn-x">7</button>
 	<button onclick="setVal('8')" class="btn-x">8</button>
 	<button onclick="setVal('9')" class="btn-x">9</button>
-	<button onclick="setVal('+')" class="btn">+ </button><br>
+	<button onclick="setVal('+')" class="btn">+ </button>
 	<button onclick="setVal('4')" class="btn-x">4 </button>
 	<button onclick="setVal('5')" class="btn-x">5 </button>
 	<button onclick="setVal('6')" class="btn-x">6 </button>
-	<button onclick="setVal('-')" class="btn">-</button><br>
+	<button onclick="setVal('-')" class="btn">-</button>
 	<button onclick="setVal('1')" class="btn-x">1</button>
 	<button onclick="setVal('2')" class="btn-x">2</button>
 	<button onclick="setVal('3')" class="btn-x">3</button>
-	<button onclick="setVal('%')" class="btn">%</button><br>
-	<button onclick="setVal('0')" class="btn-x"> 0</button>
+	<button onclick="setVal('%')" class="btn">%</button>
+		<button onclick="setVal('0')" class="btn-x"> 0</button>
 	
 	<button onclick="setVal('/')" class="btn">/</button>
 	<button onclick="getAns()" >=</button>
-    <button onclick="setVal('%')" class="btn">.</button><br>
-	
-</div>
-<div class="button">
-	<div class="history" onclick="removeVal()">
-  X</div>
-		<div class="history-div">
+    <button onclick="setVal('.')" class="btn">.</button>
+    </div>
+    <div class="button">
+	<div class="history" onclick="removeVal()">X</div>
+  <div class="history-div">
 		</div>
-	<script src="js/a.js"></script>
+	</div>
+<script type="text/javascript" src="js/a.js"></script>
 </body>
 </html>

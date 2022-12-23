@@ -1,40 +1,95 @@
-body{
-    margin:auto;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	outline:none;
+	font-family: sans-serif;
+	background-color:#ecf0f3;
+
 }
 .container{
-    
-   
+	height:100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ecf0f3;
+}
+.calc{
+	box-shadow:6px 6px 13px #fff,6px 6px 13px rgba(0,0,0,.16);
+	border-radius: 28px;
+	padding:16px;
+	display:grid;
+	grid-template-columns: repeat(4,66px);
+}
 
-  text-align: center;
-  background-color: #d3d3d3;
-  width:300px;
-  height: 374px;
+.inputEq,.input{
+	grid-column: span 4;
+	    width: 268px;
+	height:50px;
+	box-shadow:inset -6px -6px 13px #fff,inset 6px 6px 13px rgba(0,0,0,.16);
+	background-color: #ecf0f3;
+	border:none;
+	border-radius:32px;
+	outline:none;
+	color:rgb(26,25,25);
+	text-align: right;
+	/*margin:40px 0px 30px 0px;*/
+	padding:20px;
+	font-size: 40px;
+}
+button{
+	box-shadow:inset 6px 6px 13px #fff, 6px 6px 13px rgba(0,0,0,.16);
+	background-color: #ecf0f3;
+	border:none;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	margin:10px;
+	font-weight: bold;
+	font-size: 20px;
+}
 
-}
-.bg-color{
-    float:left;
-}
-input,button{
-   
-    padding:10px 20px;
-}
-input{
-    text-align:right;
-}
+
+
 .button{
-    width:220px;
-    height: 375px;
-    background-color: black;
-    color:white;
-  
-    /* margin:auto; */
+	height: 473px;
+    width: 259px;
+    background-color: #ecf0f3;
+    border-radius: 32px;
+    box-shadow: inset -6px -6px 13px #fff, inset 6px 6px 13px rgb(0 ,0, 0,.16);
+    padding: 22px;
+   /*visibility:hidden;*/
+   display: none;
+   position:relative;
+   /*animation: example 2s linear 2s infinite;*/
+
+	
 }
+
+
+/*@keyframes example{
+	from{
+		left:0px;
+	}
+	to{
+		right:300px;
+	}
+}*/
 .history{
-    background-color:red;
-    width:20px;
-  
-    
+	 border-radius: 50%;
+    box-shadow:  6px 6px 13px #fff, -6px -6px 13px rgb(0 0 0 / 16%);
+   width:45px;
+   height:50px;
+   padding: 17px;
+   margin:3px;
+   font-weight: bold;
+ 
+
+}
+.history-div{
+	font-weight: bold;
+	margin:5px;
+	 box-shadow: inset -6px -6px 13px #fff, inset 6px 6px 13px rgb(0 ,0, 0,.16);
+      padding:10px;
+        overflow: auto;
 }

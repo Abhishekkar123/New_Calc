@@ -14,11 +14,11 @@ function setVal(val){
 
 function getAns(){
     
-   eq=inputval.value+"="
+   eq= inputval.value +"=";
    eq1.push(eq);
    ans.push(eval(inputval.value));
   // console.log(eq1+" "+ans);
-    inputEq.value=inputval.value;
+    inputEq.value=eq;
     inputval.value=eval(inputval.value);
   
 }
@@ -37,17 +37,24 @@ function backVal(){
               inputval.value=0;
            }
 }
-
+var hide=true;
 function showHistory(){
    //Hist.style.visibility='visible';
+  if(hide){
+    document.querySelector(".button").style.display='block';
+  }else{
+      document.querySelector(".button").style.display='none';
 
+  }
+  hide=!hide;
     Hist.innerHTML="";
     for(let i=0;i<ans.length;i++)
     {
-   Hist.innerHTML+="<span>"+eq1[i]+" "+ans[i]+"</span><br>"
+   Hist.innerHTML+="<div>"+eq1[i]+" "+ans[i]+"</div><br>"
     }
+
 }
-removeVal=() =>{
+function removeVal(){
     var status=confirm("you want to delete history?");
     if(status)
      {
@@ -55,4 +62,5 @@ removeVal=() =>{
     ans=[];
     eq1=[];
      }
+
 }
